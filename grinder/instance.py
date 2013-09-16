@@ -335,7 +335,6 @@ class Instance(Notifier):
             
             # Only ensure cloud init for instances that are active. We know ssh 
             #et al will be dead for other status
-
             if launched.status == 'ACTIVE':
                 # Only ensure cloud init for launched clones
                 instance.ensure_cloudinit_done()
